@@ -1,0 +1,30 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.hero{
+    min-height: 60rem;
+    //background-color: v.$primario;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    &__texto{
+        color: v.$blanco;
+        max-width: 60rem;
+        text-align: center;
+    }
+
+    &__enlace{
+        @include m.boton(v.$terciario, v.$blanco);
+    }
+
+
+}

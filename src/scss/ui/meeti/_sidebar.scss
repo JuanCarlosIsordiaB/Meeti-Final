@@ -1,0 +1,44 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.contenido{
+    margin-top: 4rem;
+
+
+    &__grid{
+        display: grid;
+
+        @include m.tablet { 
+            grid-template-columns: 2fr 1fr;
+        }
+        
+    }
+
+    
+
+    
+}
+
+.ubicacion{
+    background-color: v.$secundario;
+    padding: 2rem;
+    text-align: center;
+    
+
+    &__titulo{
+        font-weight: 700;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+    &__titulo,
+    &__informacion{
+        color: v.$blanco;
+        line-height: 1.5;
+        span{
+            font-weight: 700;
+        }
+    }
+}
